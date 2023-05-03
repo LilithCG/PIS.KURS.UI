@@ -52,10 +52,11 @@ export const MainPage = () => {
                     }}
                     initialValues={{remember: true}}
                     onFinish={(values) => {
+                        let description = (values.description) ? `"${values.description}"` : null
                         query(`mutation{
                           createTask(input: {task: {
                             name: "${values.name}"
-                            description: "${values.description}"
+                            description: ${description}
                           }}) {
                             task{
                               id
