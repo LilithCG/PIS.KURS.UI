@@ -2,7 +2,7 @@ import App from "../App";
 import React from "react";
 import {
     ApartmentOutlined, AppstoreOutlined,
-    BookOutlined, DatabaseOutlined,
+    BookOutlined, DatabaseOutlined, FileDoneOutlined,
     HomeOutlined, TeamOutlined,
     UploadOutlined
 } from "@ant-design/icons";
@@ -10,6 +10,8 @@ import {MainPage} from "../pages/main/MainPage";
 import {UserTable} from "../pages/User/UserTable";
 import {UserProfile} from "../pages/User/UserProfile";
 import {Roles} from "./access/Roles";
+import {Kpi} from "../pages/Kpi/Kpi";
+import {ReportTable} from "../pages/Reports/ReportTable";
 interface RouteItem {
     label?: React.ReactNode,
     icon?: React.ReactNode,
@@ -32,15 +34,15 @@ export const routers: RouteItem[] = [
             },
             {
                 label: "Отчёты",
-                element: <MainPage/>,
-                path: '/main1',
+                element: <ReportTable/>,
+                path: '/reports',
                 icon: <BookOutlined />,
             },
             {
                 label: "KPI",
-                element: <MainPage/>,
-                path: '/main2',
-                icon: <HomeOutlined />,
+                element: <Kpi/>,
+                path: '/kpi',
+                icon: <FileDoneOutlined />,
             },
             {
                 label: "Пользователи",
