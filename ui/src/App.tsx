@@ -129,7 +129,7 @@ const App: React.FC = () => {
                         </Routes>
                         <FloatButton.BackTop/>
                     </Content>
-                    <Footer style={{textAlign: 'center'}}>Владимир Митюшин, Сайтырлы Ярослав группа 3254</Footer>
+                    <Footer style={{textAlign: 'center'}}>dev</Footer>
                 </Layout>
             </Layout>
         </ConfigProvider>

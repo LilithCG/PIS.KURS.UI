@@ -25,9 +25,21 @@ export const routers: RouteItem[] = [
         element: <App/>,
         children: [
             {
-                label: "Главная",
+                label: "Задачи",
                 element: <MainPage/>,
                 path: '/main',
+                icon: <HomeOutlined />,
+            },
+            {
+                label: "Отчёты",
+                element: <MainPage/>,
+                path: '/main1',
+                icon: <HomeOutlined />,
+            },
+            {
+                label: "KPI",
+                element: <MainPage/>,
+                path: '/main2',
                 icon: <HomeOutlined />,
             },
             {
