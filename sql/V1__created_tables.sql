@@ -87,3 +87,8 @@ CREATE TABLE IF NOT EXISTS public.distribution
     user_id BIGINT REFERENCES users,
     users_task_role TEXT
 );
+
+INSERT INTO public.task_priority (id, name)
+VALUES (1, 'Низкий'),
+       (2, 'Средний'),
+       (3, 'Высокий');

@@ -1,7 +1,7 @@
 import App from "../App";
 import React from "react";
 import {
-    ApartmentOutlined,
+    ApartmentOutlined, AppstoreOutlined,
     BookOutlined, DatabaseOutlined,
     HomeOutlined, TeamOutlined,
     UploadOutlined
@@ -28,13 +28,13 @@ export const routers: RouteItem[] = [
                 label: "Задачи",
                 element: <MainPage/>,
                 path: '/main',
-                icon: <HomeOutlined />,
+                icon: <AppstoreOutlined />,
             },
             {
                 label: "Отчёты",
                 element: <MainPage/>,
                 path: '/main1',
-                icon: <HomeOutlined />,
+                icon: <BookOutlined />,
             },
             {
                 label: "KPI",
