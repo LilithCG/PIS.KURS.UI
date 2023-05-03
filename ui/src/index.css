@@ -1,0 +1,14 @@
+html, body, #root {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.trigger{
+    padding: 20px;
+}
+/* Держит картинку внутри блока */
+img {max-width:100%;height:auto;}

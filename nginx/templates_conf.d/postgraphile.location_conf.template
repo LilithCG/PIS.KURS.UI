@@ -1,0 +1,13 @@
+set $pg_target "${POSTGRAPHILE_URL}";
+
+location /pg {
+  rewrite ^/pg/(.*)$ /$1 break;
+  proxy_pass $pg_target;
+  sub_filter "/_postgraphile/" "/pg/_postgraphile/";
+  sub_filter_once off;
+}
+
+#Fix for graphiql
+location /graphql {
+  proxy_pass $pg_target;
+}

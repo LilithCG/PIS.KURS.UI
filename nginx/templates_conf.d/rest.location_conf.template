@@ -1,0 +1,25 @@
+set $rest_target ${UI_REST_URL};
+
+location /rest/table-backend/export {
+  rewrite ^/rest/(.*)$ /$1 break;
+  proxy_pass $rest_target;
+}
+
+location /rest/table-backend {
+  rewrite ^/rest/(.*)$ /$1 break;
+  proxy_set_header Authorization "";
+  proxy_http_version 1.1;
+  proxy_set_header Upgrade $http_upgrade;
+  proxy_set_header Connection "upgrade";
+  proxy_pass $rest_target;
+}
+
+location /rest/table-backend-http {
+  rewrite ^/rest/(.*)$ /$1 break;
+  proxy_pass $rest_target;
+}
+
+location /rest {
+  rewrite ^/rest/(.*)$ /$1 break;
+  proxy_pass $rest_target;
+}
