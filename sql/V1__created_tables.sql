@@ -4,7 +4,7 @@ CREATE TABLE IF NOT EXISTS public.format
     format TEXT NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS public."position"
+CREATE TABLE IF NOT EXISTS public.position
 (
     id BIGSERIAL PRIMARY KEY,
     position TEXT NOT NULL
