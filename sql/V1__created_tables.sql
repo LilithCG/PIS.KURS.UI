@@ -1,38 +1,38 @@
 CREATE TABLE IF NOT EXISTS public.format
 (
     id BIGSERIAL PRIMARY KEY,
-    format TEXT NOT NULL
+    name TEXT NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS public.position
 (
     id BIGSERIAL PRIMARY KEY,
-    position TEXT NOT NULL
+    name TEXT NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS public.role
 (
     id BIGSERIAL PRIMARY KEY,
-    role TEXT NOT NULL
+    name TEXT NOT NULL
 );
 
 
 CREATE TABLE IF NOT EXISTS public.task_priority
 (
     id BIGSERIAL PRIMARY KEY,
-    task_priority TEXT
+    name TEXT
 );
 
 CREATE TABLE IF NOT EXISTS public.task_status
 (
     id BIGSERIAL PRIMARY KEY,
-    task_status TEXT NOT NULL
+    name TEXT NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS public.user_status
 (
     id BIGSERIAL PRIMARY KEY,
-    user_status TEXT NOT NULL
+    name TEXT NOT NULL
 );
 
 
