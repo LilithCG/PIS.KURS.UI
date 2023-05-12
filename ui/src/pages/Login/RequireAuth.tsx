@@ -1,12 +1,12 @@
 import {router} from "../../utils/routes";
-import {setCookiesToken} from "./TokenUtil";
 
 function RequireAuth({ children } : any) {
-    const authed = localStorage.getItem("token")
+    const authed = localStorage.getItem("user")
+
     // fix old local storage
-    if(authed){
-        setCookiesToken(authed)
-    }
+    // if(authed){
+    //     setCookiesToken(authed)
+    // }
 
     // Болванка на время
     return authed ? children : router.navigate("/login");

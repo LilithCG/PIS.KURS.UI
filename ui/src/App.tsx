@@ -40,8 +40,8 @@ const App: React.FC = () => {
             <Layout style={{minHeight: '100vh'}}>
                 <Sider trigger={null} style={{background: 'white'}} collapsible collapsed={collapsed}
                        onCollapse={(value) => setCollapsed(value)}>
-                    {collapsed ? <div style={{height: 20, margin: 26, color: PRIMARY_COLOR, fontSize: 16}}>КМ</div>
-                        : <div style={{height: 50, margin: 16, color: PRIMARY_COLOR, fontSize: 16}}>Корпоративный<br/>мессенджер
+                    {collapsed ? <div style={{height: 20, margin: 26, color: PRIMARY_COLOR, fontSize: 16}}>ИСРЗ</div>
+                        : <div style={{height: 50, margin: 16, color: PRIMARY_COLOR, fontSize: 16}}>ИС<br/>распределения задач
                         </div>}
                     <Menu theme="light" mode="inline"
                           defaultSelectedKeys={(location.pathname == '/') ? ["0"] : [String(routers.at(0)?.children?.filter(item => item.label != null).map((value, index) => {

@@ -1,10 +1,9 @@
 import React from 'react';
-import {Button, Card, Form, Input} from 'antd';
-import {PRIMARY_COLOR, PRIMARY_SPECIAL_COLOR, tokenPass} from "../../utils/consts";
+import {Button, Card, Form, Input, notification} from 'antd';
+import {PRIMARY_COLOR, PRIMARY_SPECIAL_COLOR} from "../../utils/consts";
 import {LockOutlined, LoginOutlined, UserOutlined} from "@ant-design/icons";
 import {Blocks} from "react-loader-spinner";
 import {useLocation} from "react-router-dom";
-import {Container} from "typescript-ioc";
 import {router} from "../../utils/routes";
 import {setCookiesToken} from "./TokenUtil";
 
@@ -48,12 +47,17 @@ const Login: React.FC = () => {
                         maxWidth: 600,
                     }}
                     initialValues={{remember: true}}
-                    onFinish={(values) => {
-                                setCookiesToken(tokenPass)
-                                if (location.pathname == "/login")
-                                    router.navigate("/main")
-                                else
-                                    router.navigate(location.pathname)}
+                    onFinish={async (values) => {
+                        if (await setCookiesToken(values.login, values.password)) {
+                            if (location.pathname == "/login")
+                                router.navigate("/main")
+                            else
+                                router.navigate(location.pathname)
+                        }
+                        else {
+                            notification.error({message: "Неправильный логин или пароль"})
+                        }
+                    }
                     }
                     onFinishFailed={onFinishFailed}
                     autoComplete="off"

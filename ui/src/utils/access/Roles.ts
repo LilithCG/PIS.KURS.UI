@@ -1,5 +1,5 @@
 export const Roles = {
-    ADMIN: {id: 1, name: "ADMIN"},
-    MANAGER: {id: 2, name: "MANAGER"},
-    WORKER: {id: 3, name: "WORKER"}
+    WORKER: {id: 1, name: "Работник"},
+    MANAGER: {id: 2, name: "Менеджер"},
+    ADMIN: {id: 3, name: "Администратор"}
 }

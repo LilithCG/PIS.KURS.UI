@@ -92,3 +92,8 @@ INSERT INTO public.task_priority (id, name)
 VALUES (1, 'Низкий'),
        (2, 'Средний'),
        (3, 'Высокий');
+
+INSERT INTO public.role (id, name)
+VALUES (1, 'Работник'),
+       (2, 'Менеджер'),
+       (3, 'Администратор');
