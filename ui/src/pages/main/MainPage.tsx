@@ -39,6 +39,7 @@ export const MainPage = () => {
                 />
             </Card>
             <Modal
+                title={"Создание задачи"}
                 open={visible}
                 onCancel={() => setVisible(false)}
                 footer={null}
